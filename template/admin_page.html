@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            color: white;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            padding: 20px;
+        }
+        .card {
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px 0;
+            padding: 15px;
+        }
+        .card h3 {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>{{name}} Dashboard</h1>
+    </header>
+    <nav>
+        <a href="#manage-users">Manage Users</a>
+        <a href="#view-reports">View Reports</a>
+        <a href="#settings">Settings</a>
+    </nav>
+    <div class="container">
+        <section id="manage-users" class="card">
+            <h3>Manage Users</h3>
+            <p>Add, edit, or delete user accounts.</p>
+            <button>Add User</button>
+            <button>Edit User</button>
+            <button>Delete User</button>
+        </section>
+        <section id="view-reports" class="card">
+            <h3>View Reports</h3>
+            <p>View system activity, usage statistics, and logs.</p>
+            <button>View Reports</button>
+        </section>
+        <section id="settings" class="card">
+            <h3>Settings</h3>
+            <p>Update system settings and preferences.</p>
+            <button>Update Settings</button>
+        </section>
+    </div>
+    <!-- <h3>{{name}}</h3> -->
+    <a href="{% url 'lgout' %}"><button type="submit">LOGOUT</button></a>
+</body>
+</html>
